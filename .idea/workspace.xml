@@ -130,12 +130,14 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Sauvan\phoneBook\resources\views\contacts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sauvan\phoneBook\app\Http\Controllers" />
+      <recent name="C:\Users\Sauvan\phoneBook\app\Http\Controllers\Auth" />
       <recent name="C:\Users\Sauvan\phoneBook\resources\views\contacts" />
       <recent name="C:\Users\Sauvan\phoneBook\resources\views\internals" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sauvan\phoneBook\resources\views\contacts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -171,7 +173,10 @@
       <workItem from="1573132674096" duration="13262000" />
       <workItem from="1573222955605" duration="18786000" />
       <workItem from="1573244129244" duration="6069000" />
-      <workItem from="1573299845963" duration="697000" />
+      <workItem from="1573299845963" duration="1384000" />
+      <workItem from="1573382472056" duration="8089000" />
+      <workItem from="1573482532599" duration="5414000" />
+      <workItem from="1573560524873" duration="5494000" />
     </task>
     <servers />
   </component>

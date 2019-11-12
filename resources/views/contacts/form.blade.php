@@ -9,4 +9,5 @@
     <input type="text" name="number" value="{{old('number')?? $contact->number}}" class="form-control">
 </div>
 <div>{{$errors->first('number')}}</div>
+
 @csrf

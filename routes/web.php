@@ -25,8 +25,11 @@ Route::get('/sortByNumber', 'ContactsController@sortByNumber');
 Route::resource('contacts', 'ContactsController');
 
 
-Auth::routes();
 
+
+Auth::routes();
+Route::get('changePassword', 'ChangePasswordController@index');
+Route::post('changePassword', 'ChangePasswordController@store')->name('change.password');
 Route::get('/home', 'HomeController@index')->name('home');
 
 

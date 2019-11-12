@@ -14,7 +14,7 @@ class ContactsController extends Controller
     }
 
     public function index(){
-        $contacts = contact::orderBy('number')->paginate(5);
+        $contacts =  auth()->user()->contacts()->orderBy('number')->paginate(5);
        //$contacts = (new \App\contact)->scopeSearch('name')->paginate(5);
 
         return view('contacts/index',compact('contacts'));
@@ -38,7 +38,7 @@ class ContactsController extends Controller
 
     public function store(){
 
-        contact::create($this->validateRequest());
+        auth()->user()->contacts()->create($this->validateRequest());
         /*
         $contact = new contact();
         $contact ->name = request('name');
