@@ -27,7 +27,7 @@ class ContactsController extends Controller
         return view('contacts/create', compact('contact'));
     }
     public function search(){
-        //contact::create($this->validateRequest());
+        contact::create($this->validateRequest());
         $search = request('search');
         $contacts = contact::where('name','like', '%'.$search.'%')->paginate(5);
 
@@ -71,20 +71,24 @@ class ContactsController extends Controller
 
     private function validateRequest(){
 
+        $request =new Request();
         return request()->validate([
+            //'user_id'=>['unique:contacts', 'user_id'],
             'name'=>['required', 'min:3'],
-            'number'=>['required', 'min:10', 'numeric', 'unique:contacts']
+            'number'=> ['required', 'min:10', 'numeric', 'unique:contacts'],
+
         ]);
     }
     public function sortByName(){
-        $contacts = contact::orderBy('name')->paginate(5);
+        $contacts =  auth()->user()->contacts()->orderBy('name')->paginate(5);
+
         //$contacts = (new \App\contact)->scopeSearch('name')->paginate(5);
 
         return view('contacts/index',compact('contacts'));
 
     }
     public function sortByNumber(){
-        $contacts = contact::orderBy('number')->paginate(5);
+        $contacts =  auth()->user()->contacts()->orderBy('number')->paginate(5);
         //$contacts = (new \App\contact)->scopeSearch('name')->paginate(5);
 
         return view('contacts/index',compact('contacts'));

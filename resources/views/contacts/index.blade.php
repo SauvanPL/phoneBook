@@ -41,6 +41,7 @@
        @foreach($contacts as $contact)
        <tr>
 
+
            <td><a href="/contacts/{{$contact->id}}">{{$contact->name}}</a></td>
            <td>{{$contact->number}}</td>
 

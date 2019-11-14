@@ -121,6 +121,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
     </include_path>
   </component>
   <component name="ProjectId" id="1TCENliQCJ2smxVglnYdwjIDQNK" />
@@ -176,7 +180,8 @@
       <workItem from="1573299845963" duration="1384000" />
       <workItem from="1573382472056" duration="8089000" />
       <workItem from="1573482532599" duration="5414000" />
-      <workItem from="1573560524873" duration="5494000" />
+      <workItem from="1573560524873" duration="6285000" />
+      <workItem from="1573727927913" duration="13282000" />
     </task>
     <servers />
   </component>
