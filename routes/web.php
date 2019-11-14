@@ -23,7 +23,7 @@ Route::get('/search', 'ContactsController@search');
 Route::get('/sortByName', 'ContactsController@sortByName');
 Route::get('/sortByNumber', 'ContactsController@sortByNumber');
 Route::resource('contacts', 'ContactsController');
-
+Route::get('export', 'ContactsController@export');
 
 
 

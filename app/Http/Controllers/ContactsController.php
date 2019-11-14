@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\contact;
+use App\Exports\ContactExport;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class ContactsController extends Controller
 {
@@ -93,5 +96,9 @@ class ContactsController extends Controller
 
         return view('contacts/index',compact('contacts'));
 
+    }
+    public function export()
+    {
+        return Excel::download(new ContactExport,  $fileName =  auth()->user()->name.'.xlsx');
     }
 }

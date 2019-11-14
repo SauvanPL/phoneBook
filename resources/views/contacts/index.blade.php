@@ -17,10 +17,21 @@
 
 
 
-   <div class="row">
-       <div class="col-12">
+   <div>
+
            <h1>Contact List</h1>
-           <p><a href="contacts/create">Add New Contact</a></p>
+       <div class="col">
+
+           <tr>
+               <form action="{{action('ContactsController@export')}}" >
+                   <button type="submit">Continue</button>
+               </form>
+
+               <th class="col"><a href="contacts/create">Add New Contact</a></th>
+               <th class="col"><a href="{{action('ContactsController@export')}}">Export to file</a></th>
+           </tr>
+
+
        </div>
    </div>
 
@@ -31,8 +42,9 @@
 
    <table class="table table-striped table-dark">
        <thead>
-       <tr>
 
+
+       <tr>
            <th scope="col"><a href="{{action('ContactsController@sortByName')}}">Name</a></th>
            <th scope="col"><a href="{{action('ContactsController@sortByNumber')}}">Number</a></th>
        </tr>
