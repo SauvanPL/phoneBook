@@ -9,7 +9,7 @@ class contact extends Model
 {
 
 
-    protected $fillable = ['name', 'number'];
+    protected $fillable = ['id','user_id','name', 'number','updated_at','created_at'];
     //protected $quarded = [];
 
    /* public function scopeSearch($query){

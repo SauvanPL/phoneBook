@@ -132,6 +132,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/contacts" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -181,7 +182,9 @@
       <workItem from="1573382472056" duration="8089000" />
       <workItem from="1573482532599" duration="5414000" />
       <workItem from="1573560524873" duration="6285000" />
-      <workItem from="1573727927913" duration="28144000" />
+      <workItem from="1573727927913" duration="39139000" />
+      <workItem from="1573770123622" duration="5341000" />
+      <workItem from="1573822033075" duration="10523000" />
     </task>
     <servers />
   </component>

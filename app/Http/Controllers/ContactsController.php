@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\contact;
 use App\Exports\ContactExport;
+use App\Imports\ContactsImport;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -97,8 +99,19 @@ class ContactsController extends Controller
         return view('contacts/index',compact('contacts'));
 
     }
+
     public function export()
+
     {
-        return Excel::download(new ContactExport,  $fileName =  auth()->user()->name.'.xlsx');
+        $fileName =  auth()->user()->name.'.xlsx';
+
+        return Excel::download(new ContactExport,  $fileName);
+    }
+
+    public function import()
+    {
+        Excel::import(new ContactsImport,request()->file('file'));
+
+        return back();
     }
 }

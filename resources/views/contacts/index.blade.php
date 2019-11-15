@@ -18,23 +18,25 @@
 
 
    <div>
-
            <h1>Contact List</h1>
-       <div class="col">
-
-           <tr>
-               <form action="{{action('ContactsController@export')}}" >
-                   <button type="submit">Continue</button>
-               </form>
-
-               <th class="col"><a href="contacts/create">Add New Contact</a></th>
-               <th class="col"><a href="{{action('ContactsController@export')}}">Export to file</a></th>
-           </tr>
-
-
-       </div>
    </div>
 
+    <div class="container">
+        <div class="card bg-light mt-3">
+
+            <div class="card-body">
+                <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <input type="file" name="file" class="form-control">
+                    <br>
+                    <a class="btn btn-primary" href="contacts/create">Add New Contact</a>
+                    <button class="btn btn-success">Import User Data</button>
+                    <a class="btn btn-warning" href="{{ route('export') }}">Export User Data</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 

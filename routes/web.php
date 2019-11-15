@@ -23,7 +23,6 @@ Route::get('/search', 'ContactsController@search');
 Route::get('/sortByName', 'ContactsController@sortByName');
 Route::get('/sortByNumber', 'ContactsController@sortByNumber');
 Route::resource('contacts', 'ContactsController');
-Route::get('export', 'ContactsController@export');
 
 
 
@@ -31,5 +30,6 @@ Auth::routes();
 Route::get('changePassword', 'ChangePasswordController@index');
 Route::post('changePassword', 'ChangePasswordController@store')->name('change.password');
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/export', 'ContactsController@export')->name('export');
+Route::post('import', 'ContactsController@import')->name('import');
 
