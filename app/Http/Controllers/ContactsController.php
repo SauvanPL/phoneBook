@@ -32,9 +32,9 @@ class ContactsController extends Controller
         return view('contacts/create', compact('contact'));
     }
     public function search(){
-        
+
         $search = request('search');
-        $contacts = contact::where('name','like', '%'.$search.'%')->paginate(5);
+        $contacts =  auth()->user()->contacts()->where('name','like', '%'.$search.'%')->paginate(5);
 
        // $orders = App\Order::search('')->where('name','like', '%'.$search.'%')->get();
 
