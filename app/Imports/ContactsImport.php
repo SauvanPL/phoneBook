@@ -6,7 +6,7 @@ use App\contact;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class ContactsImport implements ToModel, WithHeadingRow
+class ContactsImport implements ToModel
 {
     /**
      * @param array $row
@@ -17,12 +17,11 @@ class ContactsImport implements ToModel, WithHeadingRow
     {
 
         return new contact([
-            'id'     => $row['id'],
-            'user_id'    => $row['user_id'],
-            'name'     => $row['name'],
-            'number'    => $row['number'],
-            'updated_at'     => $row['updated_at'],
-            'created_at'    => $row['created_at'],
+           auth()->user(),
+            'user_id'    => $row[1],
+            'name'     => $row[2],
+            'number'    => $row[3],
+
 
         ]);
     }
