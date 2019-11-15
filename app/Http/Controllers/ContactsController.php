@@ -32,7 +32,7 @@ class ContactsController extends Controller
         return view('contacts/create', compact('contact'));
     }
     public function search(){
-        contact::create($this->validateRequest());
+        
         $search = request('search');
         $contacts = contact::where('name','like', '%'.$search.'%')->paginate(5);
 
@@ -80,7 +80,7 @@ class ContactsController extends Controller
         return request()->validate([
             //'user_id'=>['unique:contacts', 'user_id'],
             'name'=>['required', 'min:3'],
-            'number'=> ['required', 'min:10', 'numeric', 'unique:contacts'],
+            'number'=> ['required', 'min:10', 'numeric'],
 
         ]);
     }
